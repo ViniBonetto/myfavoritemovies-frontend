@@ -46,7 +46,7 @@ export default function Body(props) {
             return parseInt(a.year) - parseInt(b.year)
         })
         setMovies(data);
-    }, [filteredMovies]);
+    }, []);
 
     return (
         <Container >
