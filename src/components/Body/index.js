@@ -29,14 +29,14 @@ export default function Body(props) {
             let data = filteredMovies.sort(function (x, y) {
                 let a = x.name.toUpperCase(),
                     b = y.name.toUpperCase();
-                return a == b ? 0 : a > b ? 1 : -1;
+                return a === b ? 0 : a > b ? 1 : -1;
             });
             setMovies(data);
         } else if(event.target.textContent === "País") {
             let data = filteredMovies.sort(function (x, y) {
                 let a = x.country.toUpperCase(),
                     b = y.country.toUpperCase();
-                return a == b ? 0 : a > b ? 1 : -1;
+                return a === b ? 0 : a > b ? 1 : -1;
             });
             setMovies(data);
     }}, [filteredMovies])
